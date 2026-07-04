@@ -1,0 +1,16 @@
+cat > apps/ollama/pvc.yaml <<'EOF'
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ollama-pvc
+  namespace: ai-services
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  selector:
+    matchLabels:
+      app: ollama
+EOF
