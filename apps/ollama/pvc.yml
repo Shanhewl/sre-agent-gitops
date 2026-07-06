@@ -1,4 +1,3 @@
-cat > apps/ollama/pvc.yaml <<'EOF'
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -13,4 +12,3 @@ spec:
   selector:
     matchLabels:
       app: ollama
-EOF
